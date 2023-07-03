@@ -1,9 +1,10 @@
 name: Amnesia
+
 # event qui trigger le workflow manuellement
 on: workflow_dispatch
 env:
   NAME: Francois
-
+  
 jobs:
   say_hello:
     runs-on: ubuntu-latest
