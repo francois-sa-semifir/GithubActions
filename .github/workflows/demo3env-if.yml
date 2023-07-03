@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: "Dit bonjour"
         if: ${{env.NAME != 'Francois'}}
-        run: echo "Salut toi ! Tu n'est pas Fraçois,! Oo"
+        run: echo "Salut toi ! Tu n'est pas François,! Oo"
       - name: "Coucou François"
         if: ${{env.NAME == 'Francois'}}
         run: echo "Salut $NAME ! Tu as l'air en forme !"
