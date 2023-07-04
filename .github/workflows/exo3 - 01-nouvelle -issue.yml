@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  issue openend:
+  issue_opened:
     runs-on: ubuntu-latest
     steps:
       - name: "Issue Opened"
