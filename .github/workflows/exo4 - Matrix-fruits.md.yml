@@ -1,0 +1,23 @@
+name: fruits
+
+on: workflow_dispatch
+
+jobs:
+  fruits:
+    runs-on: ubuntu-latest
+    #définir la strategie
+    strategy:
+      # Permet de tout arrêter en cas d'échec
+      fail-fast: true
+      # Permet de stocker et d'itérer sur les listes
+      matrix:
+        # liste de fruits
+        fruits: [Pomme, Poire, Pêche, Fraise]
+        # liste de personnes
+        personnes: [Geralt, Link, Tarnished]
+    name: Fruitz
+    steps:
+      - name: phrase
+        # On utilise ${{...}} pour accéder à la valeur de l'attribut
+        run: echo "${{matrix.personnes}} mange une ${{matrix.fruits}}, et il adore ça!"
+
