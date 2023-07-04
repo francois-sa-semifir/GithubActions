@@ -18,3 +18,19 @@ jobs:
         with:
           name: artifact
           path: artifact.txt
+
+  download:
+    needs: upload
+    name: download
+    runs-on: ubuntu-latest
+    steps:
+      - name: download file
+      # On récupère le fuichier viea l'action download-artifact
+        uses: actions/download-artifact@v3
+        with:
+        # on lui précise le nom de l'artéfact à récupérer, sinon
+        # par défaut ce sera "artifact"
+          name: artifact
+      - name: read-file
+        # Commande Linux pour lire le contenu d'un fichier
+        run: cat artifact.txt
