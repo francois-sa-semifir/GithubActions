@@ -1,0 +1,14 @@
+name: Merge PR
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merges == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Merged"
+        run: echo "La PR  est merge"

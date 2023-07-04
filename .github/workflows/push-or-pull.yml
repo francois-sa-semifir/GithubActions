@@ -1,7 +1,7 @@
 # Nom de l'event
 name: Push or Pull ?
 # On passe les évènements qui nous intéressent
-on: [push, pull_request]
+on: workflow_dispatch
 
 # On déclare les variables d'environnement
 env:
