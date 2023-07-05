@@ -9,7 +9,7 @@ jobs:
   WS_Tests:
     if:  startsWith(github.head_ref, 'feature/')
     runs-on: ubuntu-latest
-    startegy:
+    strategy:
       matrix:
         node-version: [14.X, 16.X]
     
