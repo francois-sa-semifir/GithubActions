@@ -1,0 +1,4 @@
+## Permet de tirer les branches depuis la branche develop
+defaultBranch: 'develop'
+# Permet de fixer le nom de la branche sur le nom de l'issue
+branchName: '${issue.title}'
